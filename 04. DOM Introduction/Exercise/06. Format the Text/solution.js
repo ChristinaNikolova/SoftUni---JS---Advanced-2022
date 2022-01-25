@@ -34,4 +34,26 @@ function solve() {
   outputDivElement.innerHTML = result;
 
   inputTextAreaElement.value = '';
+
+  // second solution
+  // let inputTextAreaElement = document.getElementById('input');
+  // console.log(inputTextAreaElement.value);
+
+  // let sentences = inputTextAreaElement.value
+  //   .split('.')
+  //   .map((x) => x.trim())
+  //   .filter((x) => x !== '')
+  //   .map((x) => x + '.');
+
+  // let result = '';
+
+  // while (sentences.length > 0) {
+  //   const currentGroupSentences = sentences.splice(0, 3);
+  //   result += `<p>${currentGroupSentences.join('')}</p>`
+  // }
+
+  // let outputDivElement = document.getElementById('output');
+  // outputDivElement.innerHTML = result;
+
+  // inputTextAreaElement.value = '';
 }
