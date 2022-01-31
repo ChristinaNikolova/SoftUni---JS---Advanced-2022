@@ -13,7 +13,9 @@ function solve() {
   function quiz(e) {
     let targetAnswer = e.target;
 
-    if (correctAnswers.includes(targetAnswer.textContent)) {
+    const isCorrectAnswer = correctAnswers.includes(targetAnswer.textContent);
+
+    if (isCorrectAnswer) {
       counterCorrectAnswers++;
     }
 
@@ -21,7 +23,7 @@ function solve() {
     counterAnswers++;
 
     if (counterAnswers === 3) {
-      const resultMessage = counterCorrectAnswers === 3
+      const resultMessage = counterCorrectAnswers === correctAnswers.length
         ? 'You are recognized as top JavaScript fan!'
         : `You have ${counterCorrectAnswers} right answers`;
 

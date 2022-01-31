@@ -1,16 +1,17 @@
-function add(a) {
+function add(number) {
     let sum = 0;
-    sum += a;
 
-    calc.toString = () => {
+    function add(num) {
+        sum += num;
+
+        return add;
+    }
+
+    add.toString = () => {
         return sum;
     }
-    return calc;
 
-    function calc(b) {
-        sum += b
-        return calc;
-    }
+    return add(number);
 }
 
 console.log(add(1));

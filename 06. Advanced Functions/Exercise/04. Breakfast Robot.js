@@ -1,5 +1,5 @@
 function solution() {
-    let elements = {
+    const elements = {
         'protein': 0,
         'carbohydrate': 0,
         'fat': 0,
@@ -40,12 +40,12 @@ function solution() {
             elements[element] += Number(quantity);
             return 'Success';
         } else if (command === 'prepare') {
-            let ingridients = meals[element];
+            const ingridients = meals[element];
             let canPrepare = true;
             let neededIngridients = [];
 
             Object.keys(ingridients).forEach((ing) => {
-                let neededQunatity = ingridients[ing] * Number(quantity);
+                const neededQunatity = ingridients[ing] * Number(quantity);
 
                 if (neededQunatity > elements[ing]) {
                     canPrepare = false;
@@ -54,7 +54,7 @@ function solution() {
             });
 
             if (!canPrepare) {
-                let firstNeededIng = neededIngridients.shift();
+                const firstNeededIng = neededIngridients.shift();
                 return `Error: not enough ${firstNeededIng} in stock`;
             }
 

@@ -9,7 +9,9 @@ function lockedProfile() {
         let targetButtonElement = e.target;
         let targetProfileElement = targetButtonElement.parentElement;
 
-        if (targetProfileElement.children[2].checked) {
+        const isLocked = targetProfileElement.children[2].checked
+
+        if (isLocked) {
             return;
         }
 

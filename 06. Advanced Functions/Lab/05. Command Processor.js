@@ -3,7 +3,7 @@ function solution() {
 
     const obj = {
         append: function (str) {
-            result = result + str;
+            result += str;
         },
         removeStart: function (n) {
             result = result.slice(n);

@@ -1,11 +1,11 @@
 function getFibonator() {
-    let currNum = 0;
-    let nextNum = 1;
+    let [currNum, nextNum] = [0, 1];
 
     function fib() {
-        let num = nextNum;
-        nextNum = currNum + nextNum;
-        currNum = num;
+        const sum = currNum + nextNum;
+        
+        currNum = nextNum;
+        nextNum = sum;
 
         return currNum;
     }
