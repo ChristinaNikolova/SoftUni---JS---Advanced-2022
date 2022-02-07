@@ -11,24 +11,24 @@ class List {
     }
 
     remove(index) {
-        if (index < 0 || index >= this.size) {
-            throw new Error('Invalid Index');
-        }
-
+        this.isIndexValid(index);
         this.numbers.splice(index, 1);
         this.size--;
     }
 
     get(index) {
-        if (index < 0 || index >= this.size) {
-            throw new Error('Invalid Index');
-        }
-
+        this.isIndexValid(index);
         return this.numbers[index];
     }
 
     sortNumbers() {
         this.numbers.sort((a, b) => a - b);
+    }
+
+    isIndexValid(index) {
+        if (index < 0 || index >= this.size) {
+            throw new Error('Invalid Index');
+        }
     }
 }
 

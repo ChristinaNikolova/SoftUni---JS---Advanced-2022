@@ -17,13 +17,13 @@ function solve(input, criteria) {
         return acc;
     }, []);
 
-    if (criteria === 'destination') {
-        tickets.sort((a, b) => a.destination.localeCompare(b.destination));
-    } else if (criteria === 'price') {
-        tickets.sort((a, b) => a.price - b.price);
-    } else if (criteria === 'status') {
-        tickets.sort((a, b) => a.status.localeCompare(b.status));
-    }
+    tickets.sort((a, b) => {
+        if (criteria === 'price') {
+            return a[criteria] - b[criteria];
+        }
+
+        return a[criteria].localeCompare(b[criteria]);
+    });
 
     return tickets;
 }
