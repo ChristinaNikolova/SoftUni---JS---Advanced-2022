@@ -12,7 +12,7 @@ function toStringExtension() {
 
     class Teacher extends Person {
         constructor(name, email, subject) {
-            super(name, email)
+            super(name, email);
             this.subject = subject;
         }
 
@@ -23,7 +23,7 @@ function toStringExtension() {
 
     class Student extends Person {
         constructor(name, email, course) {
-            super(name, email)
+            super(name, email);
             this.course = course;
         }
 

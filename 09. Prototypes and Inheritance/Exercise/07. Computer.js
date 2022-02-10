@@ -36,7 +36,7 @@ function createComputerHierarchy() {
 
     class Laptop extends Computer {
         constructor(manufacturer, processorSpeed, ram, hardDiskSpace, weight, color, battery) {
-            super(manufacturer, processorSpeed, ram, hardDiskSpace)
+            super(manufacturer, processorSpeed, ram, hardDiskSpace);
             this.weight = weight;
             this.color = color;
             this.battery = battery;
@@ -57,7 +57,7 @@ function createComputerHierarchy() {
 
     class Desktop extends Computer {
         constructor(manufacturer, processorSpeed, ram, hardDiskSpace, keyboard, monitor) {
-            super(manufacturer, processorSpeed, ram, hardDiskSpace)
+            super(manufacturer, processorSpeed, ram, hardDiskSpace);
             this.keyboard = keyboard;
             this.monitor = monitor;
         }
